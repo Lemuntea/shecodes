@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        color: #1c52bc;
+        text-align: center;
+      }
+
+      div {
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+        padding: 10px 10px 5px 10px;
+        font-family: inherit;
+      }
+      div:hover {
+        background-color: #fff9ef;
+        border-radius: 10px;
+        transition: all 100ms ease-in;
+      }
+
+      .Max {
+        font-weight: bold;
+      }
+
+      .today {
+        display: block;
+        font-size: x-large;
+        text-align: center;
+      }
+      button {
+        color: #fff;
+        background-color: #1a58d2;
+        border: none;
+        border-radius: 22px;
+        padding: 15px;
+        display: block;
+        margin: auto;
+      }
+
+      button:hover {
+        background-color: #7c1934;
+        transition: all 200ms ease-in;
+      }
+      .creator {
+        display: block;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>⛅</h1>
+
+    <h2>Currently 21° in Tokyo</h2>
+
+    <span class="today"> 13°/ <span class="Max"> 23° </span> </span>
+    <br />
+
+    <div>
+      <strong> 🌧️ Tomorrow </strong>
+      <p>10° / <span class="Max"> 22° </span></p>
+    </div>
+
+    <br />
+
+    <div>
+      <strong> ⛅ Saturday </strong>
+      <p>
+        15° /
+        <span class="Max"> 17° </span>
+      </p>
+    </div>
+
+    <br />
+    <div>
+      <strong> ☀️ Sunday </strong>
+      <p>
+        25° /
+        <span class="Max"> 28° </span>
+      </p>
+    </div>
+    <br />
+    <button>Change city</button>
+    <br />
+    <span class="creator"> Coded by Lemuntea🍋 </span>
+    <script>
+      function changeCity() {
+        let newCity = prompt("What city do you live in?");
+        let temp = prompt("What is the current temperature there?");
+        let icon = document.querySelector("h1");
+        let heading = document.querySelector("h2");
+
+        if (temp > 0) {
+          icon.innerHTML = "😊";
+          heading.innerHTML = `Currently ${temp}°C in ${newCity}`;
+        } else {
+          icon.innerHTML = "😞";
+          heading.innerHTML = `Currently ${temp}°C in ${newCity}`;
+        }
+      }
+
+      let citybutton = document.querySelector("button");
+      citybutton.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>
