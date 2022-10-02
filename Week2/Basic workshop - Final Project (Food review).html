@@ -36,6 +36,10 @@
         margin: 10px 30px 10px 30px;
         text-align: center;
       }
+      .booking {
+        margin: 10px 30px 10px 30px;
+        text-align: center;
+      }
 
       .disclaimer {
         font-size: xx-small;
@@ -51,7 +55,7 @@
         padding: 8px;
         text-decoration: none;
         box-shadow: 1px 3px;
-        cursor: point8;
+        cursor: pointer;
         display: block;
         margin: 0 auto;
       }
@@ -129,7 +133,7 @@
         beetroot suprisingly blended well
       </p>
       <hr />
-      <div class="closing">
+      <div class="booking">
         To check out what deals are currently available at Naked for Satan and
         make a reservation click the button below!
       </div>
@@ -150,14 +154,31 @@
       </div>
     </div>
     <script>
-      function Subscribing() {
-        let name = prompt("Heyya What is your name or your online Alias?");
-        let email = prompt("What is your email address? 🖅");
-        let suggest = prompt(
-          "Let me know one restaurant you'd like me to try & review next❣"
+      function updateclosing(newClosing) {
+        let closingThanks = document.querySelector(".closing");
+        closingThanks.innerHTML = newClosing;
+      }
+      function checkEmail() {
+        let email = prompt(
+          "What is your email address? 🖅 so you can get notified on updates"
         );
-        if ((email = email.length == 0)) {
-          prompt("Please enter your email address 𝨾");
+        if (email.includes("@")) {
+          return prompt(
+            "Let me know one restaurant you'd like me to try & review next❣"
+          );
+        } else {
+          return false;
+        }
+      }
+      function Subscribing() {
+        let name = prompt("Heyya What is your name or your online alias?");
+
+        if (checkEmail()) {
+          updateclosing(
+            `Thank you for subscribing ${name}! I'll be in touch with you soon ♡`
+          );
+        } else {
+          alert("Please click subscribe again and enter a valid email address");
         }
       }
       let applybutton = document.querySelector(".subscribeB");
