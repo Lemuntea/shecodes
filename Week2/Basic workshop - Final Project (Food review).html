@@ -8,21 +8,28 @@
     <style>
       body {
         background-color: #e3fcf9;
+        background-image: repeating-radial-gradient(
+            circle at 0 0,
+            transparent 0,
+            #e5e5f7 10px
+          ),
+          repeating-linear-gradient(#444cf755, #444cf7);
       }
-      .box-shadow {
-        color: white;
-      }
+
       h1 {
-        background-color: #8594e4;
-        margin-right: 300px;
+        background-color: rgb(107, 249, 225);
+        max-width: 550px;
         padding-left: 20px;
         border-radius: 0px 20px 0px 20px;
-        box-shadow: rgb(142, 246, 228) 2px 10px 2px 0px;
+        box-shadow: rgb(93, 116, 247) 2px 10px 2px 0px;
+      }
+      .devil {
+        color: rgb(186, 3, 3);
       }
       .container {
         max-width: 620px;
         margin: 0 auto;
-        padding: 25px;
+        padding: 5px 25px 25px 25px;
         background-color: rgb(254, 255, 255);
         border-radius: 0px 20px 0px 20px;
       }
@@ -35,6 +42,7 @@
       .closing {
         margin: 10px 30px 10px 30px;
         text-align: center;
+        font-weight: bold;
       }
       .booking {
         margin: 10px 30px 10px 30px;
@@ -74,31 +82,41 @@
         text-decoration-style: none;
         font-style: normal;
       }
+      p {
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
     </style>
   </head>
   <body>
-    <h1>↶(/｀∇´)ψ A visit to Naked for Satan</h1>
+    <h1>
+      <span class="devil">↶(/｀∇´)ψ</span>
+      A visit to Naked for Satan
+    </h1>
     <div class="container">
       <p>
         Hey everyone! I went to try food from one of Melbourne's most popular
-        bar the other day, thought of giving it a try since they had a $13 lunch
-        deal for all items on the menu. We didn't order any drinks as I can't
-        drink alcohol but here are the 3 delicious items we ordered that day;
+        bars the other day, and thought of giving it a try since they had a $13
+        lunch deal for all items on the menu. We didn't order any drinks as I
+        can't drink alcohol but here are the 3 delicious items we ordered that
+        day;
       </p>
+      <br />
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/047/180/original/IMG-20220822-WA0000__01.jpg?1664541443"
         alt="Soft shell Crab Slider in yuzu mayo"
       />
       <p>
-        First up was the Soft shell crab slider consisting of: Tempura Soft
-        Shell 🦀, Watercress,
+        First up was the Soft shell crab slider consisting of Tempura Soft Shell
+        🦀, Watercress,
         <a href="https://en.wikipedia.org/wiki/Yuzu" target="_blank"> Yuzu</a>,
         Remoulade, Milk Bun). The soft shell crab tempura was crunchy with juicy
         insides, cooked to perfection. However, it was lacking some seasoning -
-        noticably wasn't given any salt nor other spices. For the 🥛 bun, there
-        are other places that uses higher quality milk bun, theirs was quite
-        standard. The other components were fairly good as it should be but did
-        not uplift the dish as a whole making it falls quite average.
+        noticeably wasn't given any salt nor other spices. For the 🥛 bun, there
+        are other places that use higher quality milk buns, theirs was quite
+        standard. The other components were fairly good as they should be but
+        did not uplift the dish as a whole making it falls quite average.
       </p>
       <br />
       <img
@@ -107,8 +125,8 @@
       />
       <p>
         Next, the Beef Short Rib Braised in Sherry with mash 🥔. I would highly
-        recommend this one, definetly gives a bang for your buck 💰. Beef was
-        tender and flavourful - It also slid of the rib very easily!<br />
+        recommend this one, definitely gives a bang for your buck 💰. The Beef
+        was tender and flavourful - It also slid off the rib very easily!<br />
         The smooth creamy mash potato goes well with the sherry beef juice which
         compliments the beef nicely 👌. Simple and satisfying~
       </p>
@@ -121,16 +139,16 @@
       <p>
         Lastly the Pan Seared Duck Breast with Beetroot pure and Beetroot Cooked
         in Duck Fat, topped with 🍎 & Candied Hazelnut Salad + Duck Jus. This
-        one is a hit or miss dish for me as I am not a big fan of beetroots, but
-        my partner loved it! Nonetheless, I definetly understands the appeal and
+        one is a hit-or-miss dish for me as I am not a big fan of beetroots, but
+        my partner loved it! Nonetheless, I surely understand the appeal and
         appreciates the techniques used. <br />
-        Duck was juicy, golden brown with crispy skin✨. Beetroot was cooked and
-        cleaned well, its usual strong earthy flavour was mellowed out properly
-        to not over power the duck. The salad added a nice touch of sweetness
-        and the jus made it mouth watering! When eaten all together it created a
-        well balanced flavour; Fattiness from the duck, freshness of the apple,
-        a hint of sweet from the candied hazelnut and the earthy falvours of a
-        beetroot suprisingly blended well
+        The Duck was juicy, golden brown with crispy skin, the jus made it very
+        flavourful✨. Beetroot was cooked and cleaned well, its usual strong
+        earthy flavour was mellowed out properly to not overpower the duck. The
+        salad added a nice touch of sweetness and when eaten all together it
+        created a well-balanced flavour; Fattiness from the duck, freshness of
+        the apple, a hint of sweetness from the candied hazelnut and the earthy
+        flavour of a beetroot suprisingly blended well
       </p>
       <hr />
       <div class="booking">
@@ -149,40 +167,48 @@
       <button class="subscribeB">Subscribe🍋</button>
       <br />
       <div class="disclaimer">
-        The review isn't sponsored by any means and may be subjected to some
-        biasness
+        This review isn't sponsored and may be subjected to some biasness
       </div>
     </div>
     <script>
-      function updateclosing(newClosing) {
+      function updateClosing(newClosing) {
         let closingThanks = document.querySelector(".closing");
+        alert("meowmeow");
         closingThanks.innerHTML = newClosing;
       }
+
       function checkEmail() {
         let email = prompt(
           "What is your email address? 🖅 so you can get notified on updates"
         );
-        if (email.includes("@")) {
-          return prompt(
-            "Let me know one restaurant you'd like me to try & review next❣"
-          );
+        if (email.includes("@") && email.includes(".")) {
+          return true;
         } else {
           return false;
         }
       }
-      function Subscribing() {
+      function subscribing() {
         let name = prompt("Heyya What is your name or your online alias?");
 
         if (checkEmail()) {
-          updateclosing(
-            `Thank you for subscribing ${name}! I'll be in touch with you soon ♡`
+          let resto = prompt(
+            "Let me know one restaurant you'd like me to try & review next❣"
           );
+          return true;
         } else {
           alert("Please click subscribe again and enter a valid email address");
         }
       }
+
+      function subscribed() {
+        if (subscribing()) {
+          alert("cat");
+          updateClosing(`Thank you for`);
+        }
+      }
+
       let applybutton = document.querySelector(".subscribeB");
-      applybutton.addEventListener("click", Subscribing);
+      applybutton.addEventListener("click", subscribed);
     </script>
   </body>
 </html>
